@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../styles/login.css"; // Import the login.css stylesheet
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'https://blog-backend-kh3c.onrender.com';
+const API_BASE_URL = 'https://blog-backend-kh3c.onrender.com';
 
 const Register = () => {
   const [username, setUsername] = useState("");  // Use "username" per your backend
