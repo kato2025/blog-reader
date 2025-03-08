@@ -1,16 +1,17 @@
 import axios from 'axios';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000';
+// Ensure API base URL is set from Render environment variables
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://blog-backend-kh3c.onrender.com';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
   headers: {
     'Content-Type': 'application/json',
   },
-  withCredentials: true,
+  withCredentials: true, // Only needed if using cookies for authentication
 });
 
-// Axios interceptor: automatically attach JWT from localStorage if available
+// Axios interceptor: Attach JWT token from localStorage if available
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('token');
