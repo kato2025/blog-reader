@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Ensure API base URL is set from Render environment variables
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'https://blog-backend-kh3c.onrender.com';
+const API_BASE_URL = 'https://blog-backend-kh3c.onrender.com';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
